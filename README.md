@@ -1,4 +1,5 @@
 ## Competitive Programming<br>
+### 解いた問題数
 ### [paiza](https://paiza.jp/challenges)
 Rank D: 46問
 Rank C: 17問
