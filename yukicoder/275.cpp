@@ -16,5 +16,6 @@ int main(void){
     }else{
         cout << (float)(A[n/2-1] + A[n/2])/2 << endl;
     }
+    delete[] A;
     return(0);
 }
