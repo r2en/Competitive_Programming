@@ -2,25 +2,21 @@
 using namespace std;
 
 int main(void){
-    string S,A;
+    string s;
+    cin >> s;
     long long sum = 0;
-    long long N = 0;
-    long long n = 0;
-    long long num = 0;
-    cin >> S;
-    for(int i = 0; i<S.length(); i++){
-        if((S[i] == '0') || (S[i] == '1') || (S[i] == '2') || (S[i] == '3') || (S[i] == '4') || (S[i] == '5') || (S[i] == '6') || (S[i] == '7') || (S[i] == '8') || (S[i] == '9')){
-            A += S[i];    
-        }
+    for(int i = 0; i < s.length(); ++i){
+        if(s[i] == '0'){sum+=0;}
+        if(s[i] == '1'){sum+=1;}
+        if(s[i] == '2'){sum+=2;}
+        if(s[i] == '3'){sum+=3;}
+        if(s[i] == '4'){sum+=4;}
+        if(s[i] == '5'){sum+=5;}
+        if(s[i] == '6'){sum+=6;}
+        if(s[i] == '7'){sum+=7;}
+        if(s[i] == '8'){sum+=8;}
+        if(s[i] == '9'){sum+=9;}
     }
-    /*
-    N = stoi(A);
-    for(int i = 0; i<A.length();i++){
-        n = N % 10;
-        num += n;
-        N /= 10;
-    }
-    cout << num << "\n";
-    */
-    return(0);
+    cout << sum << "\n";
+    return 0;
 }
