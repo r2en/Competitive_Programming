@@ -2,27 +2,16 @@
 using namespace std;
 
 int main(){
-    string s1,s2;
-    string p1,p2;
-    long long pa,pb;
-    char x1,x2;
-    cin >> s1 >> p1 >> x1;
-    cin >> s2 >> p2 >> x2;
-    if(p1.length() > p2.length()){
-        cout << s1;
-    }else if(p1.length() < p2.length()){
-        cout << s1;
-    }else{
-        pa = stoi(p1);
-        pb = stoi(p2);
-        if(pa==pb){
-            cout << "-1";
-        }else if(pa > pb){
-            cout << s1;
-        }else if(pa < pb){
-            cout << s2;
-        }
+    string sa,sb,pa,pb,xa,xb; int cnt = 0;
+    cin >> sa >> pa >> xa >> sb >> pb >> xb;
+    if(pa.size() > pb.size()){ cout << sa << endl; }
+    else if(pa.size() < pb.size()){ cout << sb << endl; }
+    else if(pa.size() == pb.size()){
+        for(int i = 0; i < pa.size(); ++i){ 
+            if(pa[i] < pb[i]){ cout << sb << endl; break; }
+            else if(pa[i] > pb[i]){ cout << sa << endl; break; }
+            else if(pa[i] == pb[i]){ cnt++; if(pa.size() == cnt){ cout << -1 << endl; break; }}
+         }
     }
-    cout << "\n";
     return 0;
 }
