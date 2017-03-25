@@ -2,16 +2,15 @@
 using namespace std;
 
 int main(){
-    int res = 0;
-    int n,h1,m1,h2,m2,e1,e2;
-    scanf("%d",&n);
-    for(int i = 0; i < n; ++i){
+    int N; cin >> N;
+    int sum = 0;
+    int h1 = 0; int h2 = 0;
+    int m1 = 0; int m2 = 0;
+    for(int i = 0; i < N; ++i){
         scanf("%d:%d %d:%d",&h1,&m1,&h2,&m2);
-        (h2+24)-(h1+24)
-         e2 = ((h2+24)*60+m2);
-         e1 = ((h1+24)*60+m1);
-         cout << e2 << e1 << endl;
+        sum+=(h1<h2?(h2*60+m1)-(h1*60+m1):((h2+24)*60+m2)-(h1*60+m1));
+        cout << sum << endl;
     }
-    printf("res:%d\n",res);
+    cout << sum << endl;
     return 0;
 }
