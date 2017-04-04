@@ -9,7 +9,6 @@ int main(){
     for(int i = 0; i < N; ++i){
         cin >> T >> S;
         int size = S.size();
-        //printf("%f\n",size * mm);
         printf("%d\n",size - T * 12 / 1000);
     }
 
