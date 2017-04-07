@@ -5,7 +5,7 @@ Rank D: 46問
 Rank C: 17問
 Rank B: 1問
 ### [yuki_coder](http://yukicoder.me/)
-AC問題数 53/489
+AC問題数 61/489
 ### [Hacker Rank](https://www.hackerrank.com/)
 Warm up: 7問
 C++: 4問
