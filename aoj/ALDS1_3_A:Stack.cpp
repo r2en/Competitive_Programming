@@ -1,36 +1,30 @@
 #include <iostream>
+#include <cstdlib>
+#include <stack>
 using namespace std;
 
-int top,s[1000];
-
-void push(int x){
-    s[++top] = x;
-}
-
-int pop(){
-    top--;
-    return s[top+1];
-}
-
 int main(){
-    int a = 0; int b = 0;
-    top = 0;
-    char s[100];
-    while(scanf("%s",s)!=EOF){
+    stack<int> S;
+    int a, b, x;
+    string s;
+
+    while( cin >> s ){
         if(s[0] == '+'){
-            a = pop();  b = pop();
-            push(a+b);
+            a = S.top(); S.pop();
+            b = S.top(); S.pop();
+            S.push(a + b);
         }else if(s[0] == '-'){
-            b = pop();  a = pop();
-            push(a-b);
+            b = S.top(); S.pop();
+            a = S.top(); S.pop();
+            S.push(a - b);
         }else if(s[0] == '*'){
-            a = pop();  b = pop();
-            push(a * b);
+            b = S.top(); S.pop();
+            a = S.top(); S.pop();
+            S.push(a * b);
         }else{
-            push(atoi(s));
+            S.push(atoi(s.c_str()));
         }
     }
-
-    cout << pop() << endl;
+    cout << S.top() << endl;
     return 0;
 }
